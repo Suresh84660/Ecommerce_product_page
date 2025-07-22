@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page - Awesome T-Shirt</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="logo">AwesomeShop</div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="cart-icon">
+            🛒 Cart (<span id="cart-count">0</span>)
+        </div>
+    </header>
+
+    <main class="product-container">
+        <section class="product-image-gallery">
+            <img id="main-product-image" src="images/tshirt-blue-front.webp" alt="Awesome T-Shirt Blue Front" class="main-image">
+            <div class="thumbnail-gallery">
+                <img src="images/tshirt-blue-front.webp" alt="Thumbnail Blue Front" class="thumbnail active" data-color="blue" data-view="front">
+                <img src="images/tshirt-blue-back.webp" alt="Thumbnail Blue Back" class="thumbnail" data-color="blue" data-view="back">
+                <img src="images/tshirt-red-front.webp" alt="Thumbnail Red Front" class="thumbnail" data-color="red" data-view="front">
+                <img src="images/tshirt-red-back.webp" alt="Thumbnail Red Back" class="thumbnail" data-color="red" data-view="back">
+                </div>
+        </section>
+
+        <section class="product-details">
+            <h1 class="product-title">Awesome Cotton T-Shirt</h1>
+            <p class="product-price" id="product-price">$<span id="current-price">24.99</span></p>
+            <p class="product-description">
+                Our classic cotton t-shirt, made from 100% premium organic cotton. Soft, breathable, and perfect for everyday wear. Available in multiple colors and sizes.
+            </p>
+
+            <div class="product-variants">
+                <div class="variant-group">
+                    <label for="color-select">Color:</label>
+                    <div class="color-options" id="color-options">
+                        <button class="color-swatch active" data-color="blue" style="background-color: #3498db;"></button>
+                        <button class="color-swatch" data-color="red" style="background-color: #e74c3c;"></button>
+                        <button class="color-swatch" data-color="green" style="background-color: #27ae60;"></button>
+                    </div>
+                </div>
+
+                <div class="variant-group">
+                    <label for="size-select">Size:</label>
+                    <div class="size-options" id="size-options">
+                        <button class="size-button active" data-size="S">S</button>
+                        <button class="size-button" data-size="M">M</button>
+                        <button class="size-button" data-size="L">L</button>
+                        <button class="size-button" data-size="XL">XL</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-actions">
+                <div class="quantity-selector">
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" id="quantity" value="1" min="1" max="10">
+                </div>
+                <button id="add-to-cart-btn" class="add-to-cart-button">Add to Cart</button>
+            </div>
+
+            <div class="product-meta">
+                <p>SKU: <span id="product-sku">TSHIRT-BLUE-S</span></p>
+                <p>Category: T-Shirts</p>
+                <p>Material: 100% Organic Cotton</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 AwesomeShop. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
